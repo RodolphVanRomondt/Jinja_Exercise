@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Madlids {% endblock %}
+{% block heading %} Madlids {% endblock %}
+{% block body %}
+<form action="/story">
+    {% for word in words %}
+    <p>
+        {{word.upper()}}:
+        <input type="text" required name={{word}}>
+    </p>
+    {% endfor %}
+    <button>Submit</button>
+</form>
+<p>{{ select }}</p>
+{% endblock %}

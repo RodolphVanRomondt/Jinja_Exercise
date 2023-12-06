@@ -1,28 +1,13 @@
 {% extends "base.html" %}
 {% block title %} Madlids {% endblock %}
-{% block heading %} Madlids {% endblock %}
+{% block heading %} Welcome To Madlids {% endblock %}
 {% block body %}
-<form action="/story">
-    <p>
-        Place:
-        <input type="text" required name="place">
-    </p>
-    <p>
-        Noun:
-        <input type="text" required name="noun">
-    </p>
-    <p>
-        Verb
-        <input type="text" required name="verb">
-    </p>
-    <p>
-        Adjective
-        <input type="text" required name="adjective">
-    </p>
-    <p>
-        Plural Noun
-        <input type="text" required name="plural_noun">
-    </p>
-    <button>Submit</button>
+<p>How many words do you want to play with?</p>
+<form action="/form">
+    <select name="num">
+        <option value="two"> Two Words </option>
+        <option value="five"> Five Words </option>
+    </select>
+    <button>Select</button>
 </form>
 {% endblock %}

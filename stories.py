@@ -1,6 +1,5 @@
 """Madlibs Stories."""
 
-
 class Story:
     """Madlibs story.
 
@@ -31,20 +30,12 @@ class Story:
 
         for (key, val) in answers.items():
             text = text.replace("{" + key + "}", val)
-        
-        print(text)
 
         return text
 
 
 # Here's a story to get you started
 
-
-story = Story(
-    ["place", "noun", "verb", "adjective", "plural_noun"],
-    """Once upon a time in a long-ago {place}, there lived a
-       large {adjective} {noun}. It loved to {verb} {plural_noun}."""
-)
-
-ans = {"place": "Haiti", "verb": "eat", "noun": "mango", "adjective": "genius", "plural_noun": "GODS"}
-story.generate(ans)
+story_list = {"two": [["noun", "verb"], "I love to {verb} a good {noun}."],
+"five": [["place", "noun", "verb", "adjective", "plural_noun"], """Once upon a time in a long-ago {place}, there lived a
+       large {adjective} {noun}. It loved to {verb} {plural_noun}."""]}
